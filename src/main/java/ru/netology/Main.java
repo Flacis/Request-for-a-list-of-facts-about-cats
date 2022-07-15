@@ -34,7 +34,7 @@ public class Main {
                 response.getEntity().getContent(), new TypeReference<List<Cat>>() {
                 });
         catList.stream()
-                .filter(cat -> cat.getUpvotes() != null)
+                .filter(cat -> cat.getUpvotes() != null && cat.getUpvotes() > 0)
                 .forEach(System.out::println);
     }
 }
